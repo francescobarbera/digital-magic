@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  webserver:
+    container_name: PHP-webServer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - 8000:80
