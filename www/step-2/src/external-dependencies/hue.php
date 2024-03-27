@@ -1,4 +1,5 @@
 <?php
+
 class LightsManager
 {
     public function turnOn($bulbId)

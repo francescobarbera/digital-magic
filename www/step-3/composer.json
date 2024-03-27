@@ -1,0 +1,22 @@
+{
+  "name": "digital-magic/step-3",
+  "description": "TDD",
+  "require": {
+    "phpunit/phpunit": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "DigitalMagic\\Step3\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "francesco.barbera",
+      "email": "barberaf84@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "phpunit tests"
+  }
+}

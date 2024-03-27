@@ -1,5 +1,11 @@
 <?php
+
 header("Content-Type:application/json");
+
+if (!isset($_GET["state"])) {
+    response(400, "Invalid request");
+    exit();
+}
 
 $state = $_GET["state"];
 
@@ -19,8 +25,9 @@ function callAPI($state)
 {
     $HUE_BRIDGE_USER = getenv("HUE_BRIDGE_USER");
     $HUE_BRIDGE_IP = getenv("HUE_BRIDGE_IP");
+    $HUE_LIGHT_ID = getenv("HUE_LIGHT_ID");
 
-    $apiUrl = "http://$HUE_BRIDGE_IP/api/$HUE_BRIDGE_USER/lights/10/state";
+    $apiUrl = "http://$HUE_BRIDGE_IP/api/$HUE_BRIDGE_USER/lights/$HUE_LIGHT_ID/state";
 
     $curl = curl_init();
 

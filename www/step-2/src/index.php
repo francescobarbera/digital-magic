@@ -1,8 +1,14 @@
 <?php
+
 header("Content-Type:application/json");
 
 require "./usecases/manipulate-bulb.php";
 require "./external-dependencies/hue.php";
+
+if (!isset($_GET["state"])) {
+    response(400, "Invalid request");
+    exit();
+}
 
 $desiredState = $_GET["state"];
 

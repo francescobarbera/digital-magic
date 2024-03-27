@@ -1,4 +1,5 @@
 <?php
+
 require "./entities/bulb.php";
 
 function turnOn($lightsManager)
